@@ -1,0 +1,1274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Le Doan Tuong Vy — Portfolio</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400&display=swap" rel="stylesheet">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  background: #0a0a0a;
+  color: #e8e6e0;
+  font-family: 'Poppins', sans-serif;
+  overflow-x: hidden;
+}
+
+/* ── NAV ── */
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 999;
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 18px 48px;
+  background: rgba(10,10,10,0.97);
+  border-bottom: 1px solid #1c1c1c;
+}
+nav .logo { font-size: 13px; font-weight: 600; letter-spacing: 3px; text-transform: uppercase; color: #e8e6e0; text-decoration: none; }
+nav ul { list-style: none; display: flex; gap: 32px; }
+nav ul a { color: #666; text-decoration: none; font-size: 11px; font-weight: 500; letter-spacing: 2px; text-transform: uppercase; transition: color 0.2s; }
+nav ul a:hover { color: #e8e6e0; }
+
+/* ── FADE ANIMATION ── */
+.fade-up { opacity: 0; transform: translateY(24px); transition: opacity 0.8s ease, transform 0.8s ease; }
+.fade-up.visible { opacity: 1; transform: translateY(0); }
+.d1 { transition-delay: 0.1s; } .d2 { transition-delay: 0.2s; } .d3 { transition-delay: 0.3s; } .d4 { transition-delay: 0.4s; } .d5 { transition-delay: 0.5s; }
+
+/* ════════════════════════════════
+   PAGE 1 — COVER
+   background: black
+   PORTO FOLIO. huge text left-aligned
+   top-right: 2026 / E-commerce undergraduate / LE DOAN TUONG VY
+   bottom: tagline left + contact right
+════════════════════════════════ */
+#cover {
+  min-height: 100vh;
+  background: #0a0a0a;
+  padding: 0 64px 64px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  padding-top: 80px;
+}
+
+.cover-meta {
+  position: absolute;
+  top: 96px; right: 64px;
+  text-align: right;
+  line-height: 1.7;
+}
+.cover-meta .year { font-size: 12px; font-weight: 300; color: #888; }
+.cover-meta .role { font-size: 13px; font-weight: 700; color: #e8e6e0; letter-spacing: 0.5px; }
+.cover-meta .name { font-size: 12px; font-weight: 400; color: #aaa; letter-spacing: 1px; text-transform: uppercase; }
+
+.cover-big {
+  font-size: clamp(110px, 19vw, 260px);
+  font-weight: 900;
+  line-height: 0.85;
+  color: #d8d6d0;
+  letter-spacing: -4px;
+  margin-top: 60px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.cover-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding-top: 48px;
+  border-top: 1px solid #1c1c1c;
+  margin-top: 40px;
+}
+.cover-tagline { font-size: 13px; font-weight: 300; color: #888; line-height: 1.8; max-width: 480px; }
+.cover-contacts { display: flex; gap: 40px; font-size: 12px; color: #666; font-weight: 400; }
+
+/* ════════════════════════════════
+   PAGE 2 — HELLO / ABOUT
+   left: text content
+   right: photo (full height)
+════════════════════════════════ */
+#about {
+  display: grid;
+  grid-template-columns: 55% 45%;
+  border-top: 1px solid #1c1c1c;
+  align-items: start;
+}
+
+.about-left {
+  padding: 60px 64px;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.hello-title {
+  font-size: clamp(44px, 6vw, 70px);
+  font-weight: 900;
+  line-height: 0.92;
+  letter-spacing: -1px;
+  margin-bottom: 36px;
+}
+
+.about-section { margin-bottom: 20px; }
+.about-section h4 {
+  font-size: 16px; font-weight: 800; letter-spacing: 3px; text-transform: uppercase;
+  color: #e8e6e0; margin-bottom: 8px;
+}
+.about-section p, .about-section li {
+  font-size: 14px; color: #777; line-height: 1.9; list-style: none;
+}
+.about-section li { padding-left: 16px; position: relative; }
+.about-section li::before { content: "•"; position: absolute; left: 0; color: #555; }
+.about-section .exp-item { margin-bottom: 12px; }
+.about-section .exp-title { font-size: 15px; color: #aaa; font-weight: 500; }
+.about-section .exp-desc { font-size: 14px; color: #555; margin-top: 3px; line-height: 1.7; }
+
+.about-contact-bar {
+  margin-top: 24px;
+  padding-top: 18px;
+  border-top: 1px solid #1c1c1c;
+  font-size: 13px; color: #555;
+}
+
+.about-right {
+  padding: 60px 40px 60px 0;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+.about-right .photo-wrap {
+  width: 100%;
+  max-width: 320px;
+  border-radius: 6px;
+  overflow: hidden;
+  aspect-ratio: 3/4;
+}
+.about-right img {
+  width: 100%; height: 100%;
+  object-fit: cover; object-position: top center;
+  border-radius: 6px;
+  display: block;
+}
+.photo-placeholder {
+  width: 100%; height: 420px;
+  display: flex; align-items: center; justify-content: center;
+  color: #2a2a2a; font-size: 11px; letter-spacing: 3px; text-transform: uppercase;
+  background: #111; border-radius: 6px;
+}
+
+/* ════════════════════════════════
+   PAGE 3 — MY SAMPLE WORK
+   Left: big title
+   Right: numbered list with descriptions
+════════════════════════════════ */
+#work {
+  min-height: 100vh;
+  padding: 80px 64px;
+  border-top: 1px solid #1c1c1c;
+  display: grid;
+  grid-template-columns: 400px 1fr;
+  gap: 80px;
+  align-content: center;
+}
+
+.work-title-block { display: flex; flex-direction: column; justify-content: flex-start; padding-top: 8px; }
+.work-title-block .featured-label {
+  font-size: 12px; color: #666; font-style: italic; font-weight: 300;
+  margin-bottom: 12px; display: flex; align-items: center; gap: 6px;
+}
+.work-big {
+  font-size: clamp(52px, 7vw, 88px);
+  font-weight: 900;
+  line-height: 0.88;
+  letter-spacing: -2px;
+}
+
+.work-items { display: flex; flex-direction: column; }
+.work-item {
+  display: grid;
+  grid-template-columns: 56px 1fr;
+  gap: 20px;
+  padding: 28px 0;
+  border-top: 1px solid #1c1c1c;
+  text-decoration: none;
+  color: inherit;
+  transition: padding-left 0.2s;
+}
+.work-item:hover { padding-left: 8px; }
+.work-num { font-size: 13px; color: #444; font-weight: 500; padding-top: 3px; }
+.work-info h3 { font-size: 18px; font-weight: 700; margin-bottom: 6px; line-height: 1.3; }
+.work-info p { font-size: 15px; color: #666; line-height: 1.7; max-width: 580px; }
+.star-icon { color: #e8e6e0; margin-right: 4px; }
+
+/* ════════════════════════════════
+   PROJECT PAGES — shared
+════════════════════════════════ */
+.proj-page { border-top: 1px solid #1c1c1c; }
+
+/* ── VEILMARK COVER ── */
+#veilmark-cover {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  align-items: stretch;
+}
+
+.veil-left {
+  padding: 80px 64px;
+  display: flex; flex-direction: column; justify-content: center;
+  background: #0a0a0a;
+}
+.proj-label-sm { font-size: 15px; letter-spacing: 3px; text-transform: uppercase; color: #555; margin-bottom: 6px; }
+.proj-featured { font-size: 17px; color: #666; font-style: italic; margin-bottom: 18px; display: flex; align-items: center; gap: 6px; }
+.proj-name-big {
+  font-size: clamp(80px, 10vw, 130px);
+  font-weight: 900;
+  line-height: 0.88;
+  letter-spacing: -2px;
+  margin-bottom: 16px;
+}
+.proj-tagline-italic { font-size: 20px; color: #888; font-style: italic; font-weight: 300; margin-bottom: 28px; }
+.proj-subtitle-sm { font-size: 14px; letter-spacing: 2px; text-transform: uppercase; color: #555; margin-bottom: 24px; font-weight: 500; }
+.tag-row { display: flex; gap: 10px; flex-wrap: wrap; }
+.tag { font-size: 13px; color: #666; border: 1px solid #2a2a2a; padding: 6px 16px; border-radius: 20px; letter-spacing: 1px; }
+
+.veil-right {
+  display: grid;
+  grid-template-rows: auto auto;
+  gap: 12px;
+  padding: 40px 48px 40px 24px;
+  align-content: center;
+}
+.veil-right .img-slot {
+  overflow: hidden;
+  aspect-ratio: 5/4;
+  width: 80%;
+  margin-left: auto;
+  border-radius: 8px;
+}
+.veil-right .img-slot img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+/* ── CONTENT BLOCKS ── */
+.two-col {
+  display: grid; grid-template-columns: 30% 70%;
+  gap: 50px; align-items: center;
+  padding: 80px 64px;
+  margin:100px;
+  margin-right: 150px;
+}
+.two-col.reverse { direction: rtl; }
+.two-col.reverse > * { direction: ltr; }
+
+.img-slot-rect {
+  background: transparent;
+  border-radius: 6px;
+  overflow: hidden;
+}
+.img-slot-rect img {
+  width: 100%; height: auto;
+  display: block; border-radius: 6px;
+}
+
+.text-block h2 { font-size: 36px; font-weight: 800; margin-bottom: 20px; line-height: 1.2; }
+.text-block h3 { font-size: 22px; font-weight: 700; margin: 28px 0 12px; }
+.text-block p { font-size: 17px; color: #777; line-height: 1.9; margin-bottom: 14px; }
+/* ── INSIGHT SECTION (center) ── */
+.insight-section {
+  padding: 80px 64px;
+  background: #060606;
+  text-align: center;
+}
+.insight-headline {
+  font-size: clamp(28px, 3.8vw, 35px);
+  font-weight: 800; margin-bottom: 48px; line-height: 1.25;
+}
+.two-images {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 20px; max-width: 680px; margin: 0 auto 33px;
+}
+.two-images img { width: 100%; height: auto; object-fit: contain; border-radius: 6px; display: block; }
+.insight-text h4 { font-size: 25px; font-weight: 700; margin-bottom: 12px; }
+.insight-text p {
+  font-size: 20px;
+  color: #b7b3b3;
+  line-height: 1.9;
+  margin: 0 auto 14px;
+
+  max-width: 900px;
+}
+.quote-small { font-size: 15px; color: #3a3a3a; font-style: italic; }
+
+/* ── DUAL SYSTEM ── */
+.dual-section { padding: 80px 64px; }
+.dual-title { font-size: 26px; font-weight: 800; text-align: center; margin-bottom: 8px; }
+.dual-sub { font-size: 18px; color: #888; text-align: center; margin-bottom: 48px; }
+
+.dual-grid {
+  display: grid;
+  grid-template-columns: 1fr 1px 1fr 1fr;
+  gap: 0 32px;
+  align-items: start;
+  margin-bottom: 56px;
+}
+
+.dual-divider {
+  background: #444;
+  width: 1px;
+  height: 100%;
+  margin-top: 48px;
+}
+
+.dual-col-label {
+  font-size: 20px; font-weight: 800; text-align: center; margin-bottom: 6px;
+}
+.dual-col-label span {
+  display: block; font-weight: 400; color: #888; font-size: 20px; margin-bottom: 16px;
+}
+.img-slot-rect {
+  aspect-ratio: 1 / 1;
+  width: 100%;
+  max-width: 300px; /* chỉnh nhỏ hơn tại đây */
+  margin: 0 auto;
+
+  overflow: hidden;
+  border-radius: 6px;
+}
+.dual-
+.dual-col-label + .img-slot-rect img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.framework-row {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  gap: 48px;
+  border-top: 1px solid #1c1c1c;
+  padding-top: 40px;
+  align-items: start;
+}
+.framework-left h5 { font-size: 20px; font-weight: 800; margin-bottom: 24px; text-align: center; }
+.three-cols { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 24px; text-align: center; }
+.three-cols .col h6 { font-size: 15px; font-weight: 800; margin-bottom: 8px; }
+.three-cols .col p { font-size: 14px; color: #666; line-height: 1.7; }
+
+.strategic-right h5 { font-size: 20px; font-weight: 800; margin-bottom: 16px; }
+.strategic-right p { font-size: 15px; color: #666; line-height: 2.2; }
+.strategic-right strong { color: #e8e6e0; }
+
+/* ── GO TO MARKET ── */
+.gtm-section {
+  display: block;
+  padding: 80px 64px;
+  border-top: 1px solid #1c1c1c;
+}
+.gtm-left { margin-bottom: 60px; }
+.gtm-left h4 { font-size: 28px; font-weight: 900; margin-bottom: 16px; }
+.gtm-left .target-label { font-size: 14px; letter-spacing: 2px; text-transform: uppercase; font-weight: 800; margin-bottom: 12px; color: #e8e6e0; }
+.gtm-left ul { list-style: none; }
+.gtm-left ul li { font-size: 18px; color: #e8e6e0; line-height: 2.1; padding-left: 20px; position: relative; }
+.gtm-left ul li::before { content: "•"; position: absolute; left: 0; color: #e8e6e0; }
+.gtm-left .targeting-note { font-size: 14px; color: #666; margin-top: 14px; line-height: 1.7; }
+
+
+.gtm-right .rollout-title { font-size: 28px; font-weight: 800; text-align: center; margin-bottom: 60px; }
+.rollout-steps { display: flex; align-items: flex-end; justify-content: center; gap: 48px; position: relative; }
+.rollout-step { display: flex; flex-direction: column; align-items: center; }
+.rollout-circle {
+  border: 2px solid #e8e6e0; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  text-align: center; padding: 20px;
+}
+.rollout-circle.s { width: 180px; height: 180px; }
+.rollout-circle.m { width: 220px; height: 220px; }
+.rollout-circle.l { width: 260px; height: 260px; }
+.rollout-circle strong { display: block; font-size: 13px; font-weight: 800; margin-bottom: 6px; color: #e8e6e0; }
+.rollout-circle p { font-size: 12px; color: #888; line-height: 1.6; }
+.rollout-line {
+  height: 2px;
+  background: linear-gradient(to right, #0a0a0a, #888, #e8e6e0);
+  margin-top: 32px;
+  position: relative;
+}
+.rollout-line::after {
+  content: "▶";
+  position: absolute; right: -8px; top: -9px;
+  font-size: 14px; color: #e8e6e0;
+}
+.rollout-circle .longterm { font-size: 13px; color: #444; font-style: italic; margin-top: 20px; text-align: right;}
+
+/* ── FINAL STATEMENT ── */
+.final-stmt {
+  padding: 120px 64px;
+  text-align: center;
+  background: #0a0a0a;
+  border-top: 1px solid #1c1c1c;
+}
+.final-stmt h2 { font-size: 48px; font-weight: 900; margin-bottom: 16px; }
+.final-stmt .sub { font-size: 20px; font-weight: 800; margin-bottom: 8px; color: #e8e6e0; }
+.final-stmt ul { list-style: none; margin-bottom: 64px; display: flex; flex-direction: column; align-items: center; }
+.final-stmt ul li { font-size: 20px; color: #e8e6e0; line-height: 2.2; padding-left: 20px; position: relative; }
+.final-stmt ul li::before { content: "• "; color: #e8e6e0; }
+.final-big { font-size: clamp(48px, 7vw, 88px); font-weight: 900; letter-spacing: 2px; margin-bottom: 24px; }
+.final-tagline { font-size: 28px; color: #e8e6e0; max-width: 760px; margin: 0 auto 16px; line-height: 1.6; font-weight: 400; letter-spacing: 0.5px; }
+.final-footnote { font-size: 14px; color: #444; font-style: italic; margin-top: 48px; text-align: right; }
+/* ════════════════════════════════
+   EARNFORLIFE COVER
+════════════════════════════════ */
+#earnforlife-cover {
+  padding: 80px 40px;
+  border-top: 1px solid #1c1c1c;
+}
+
+/* TOP TEXT */
+.efl-proj-label {
+  display: flex;
+  align-items: center;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #555;
+  margin-bottom: 10px;
+  gap: 0;
+}
+
+.efl-meta {
+  font-size: 12px;
+  color: #444;
+  font-weight: 400;
+  margin-left: 16px;
+  letter-spacing: 1px;
+  text-transform: none;
+}
+
+.efl-name {
+  font-size: clamp(72px, 10vw, 180px);
+  font-weight: 900;
+  letter-spacing: -5px;
+  line-height: 0.9;
+  margin-bottom: 20px;
+}
+
+.efl-desc {
+  font-size: 20px;
+  color: #777;
+  font-weight: 300;
+  max-width: 980px;
+  line-height: 1.7;
+  margin-bottom: 40px;
+}
+
+.mockup-wrapper {
+  display: grid;
+  grid-template-columns: 5fr 3fr 2.2fr;
+  gap: 16px;
+  align-items: center;
+  width: 100%;
+  background: #000;
+  border-radius: 16px;
+  padding: 16px;
+  box-sizing: border-box;
+}
+
+.mockup-main,
+.mockup-phone {
+  width: 100%;
+}
+
+.mockup-main img,
+.mockup-phone img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.mockup-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.mockup-stack .stack-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+#page2 {
+    display: grid;
+    grid-template-columns: 1fr 1.7fr;
+    gap: 80px;
+    align-items: start;
+  }
+  .overview-body {
+    font-size: 14px;
+    line-height: 1.9;
+    color: #444;
+    font-weight: 300;
+    margin-bottom: 40px;
+    max-width: 340px;
+  }
+  .info-block { margin-bottom: 28px; }
+  .info-block-label {
+    font-size: 10px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--accent);
+    font-weight: 500;
+    margin-bottom: 6px;
+  }
+  .info-block-value {
+    font-size: 13px;
+    color: var(--black);
+    font-weight: 400;
+    line-height: 1.7;
+  }
+  .walkthrough-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--black);
+    text-decoration: none;
+    border-bottom: 1px solid var(--black);
+    padding-bottom: 2px;
+    margin-top: 8px;
+    transition: color 0.2s;
+  }
+  .walkthrough-link:hover { color: var(--accent); border-color: var(--accent); }
+  .overview-right {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  .overview-hero { width: 100%; height: 340px; }
+  .overview-duo {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+  .overview-duo .img-slot { height: 200px; }
+
+  /* ─── PAGE 3 — SHOPPING FLOW ─── */
+  .flow-header { margin-bottom: 48px; }
+  .flow-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+  .flow-img {
+    width: 100%;
+    height: 260px;
+    margin-bottom: 12px;
+  }
+  .flow-caption-title {
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--black);
+    margin-bottom: 4px;
+  }
+
+  /* ─── PAGE 4 — TRUST & SUPPORT ─── */
+  .trust-header { margin-bottom: 48px; }
+  .trust-top {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-bottom: 24px;
+  }
+  .trust-top-img { height: 280px; }
+  .trust-bottom {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    align-items: start;
+  }
+  .trust-card {
+    background: var(--beige-light);
+    border-radius: 12px;
+    padding: 28px 24px;
+  }
+  .trust-card-label {
+    font-size: 10px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--accent);
+    font-weight: 500;
+    margin-bottom: 12px;
+  }
+  .trust-card-title {
+    font-family: var(--font-display);
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+  .trust-card-body {
+    font-size: 13px;
+    color: #666;
+    font-weight: 300;
+    line-height: 1.8;
+  }
+  .trust-mobile { height: 340px; border-radius: 28px; }
+
+  /* ─── PAGE 5 — REFLECTION ─── */
+  #page5 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100vh;
+  }
+  .reflection-title {
+    font-family: var(--font-display);
+    font-size: clamp(56px, 8vw, 120px);
+    font-weight: 900;
+    letter-spacing: -4px;
+    line-height: 0.95;
+    margin-bottom: 80px;
+  }
+  .reflection-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    max-width: 900px;
+    margin-bottom: 80px;
+  }
+  .reflection-block-label {
+    font-size: 10px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--accent);
+    font-weight: 500;
+    margin-bottom: 20px;
+  }
+  .reflection-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .reflection-list li {
+    font-size: 15px;
+    font-weight: 400;
+    color: var(--black);
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    line-height: 1.6;
+  }
+  .reflection-list li::before {
+    content: '—';
+    color: var(--accent);
+    flex-shrink: 0;
+    margin-top: 1px;
+  }
+  .reflection-body {
+    font-size: 15px;
+    font-weight: 300;
+    color: #555;
+    line-height: 1.9;
+    max-width: 420px;
+  }
+  .reflection-footer {
+    border-top: 1px solid var(--beige);
+    padding-top: 32px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .tools-label {
+    font-size: 10px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--warm-gray);
+    font-weight: 500;
+  }
+  .tools-list {
+    font-size: 13px;
+    color: var(--black);
+    font-weight: 400;
+    letter-spacing: 1px;
+  }
+
+  /* ─── SHARED img-slot (nếu chưa có) ─── */
+  .img-slot {
+    background: var(--beige-light);
+    border: 1.5px dashed var(--beige);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 8px;
+    color: var(--warm-gray);
+    font-size: 12px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-weight: 500;
+    overflow: hidden;
+  }
+  .img-slot img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  .img-slot span { pointer-events: none; }
+  .caption {
+    font-size: 11px;
+    color: var(--warm-gray);
+    margin-top: 10px;
+    letter-spacing: 0.5px;
+    line-height: 1.6;
+  }
+/* ══════ EARNFORLIFE SECTIONS ══════ */
+.efl-section {
+  padding: 80px 64px;
+  border-top: 1px solid #1c1c1c;
+}
+.efl-section-dark { background: #060606; }
+
+.efl-section-label {
+  font-size: 11px; font-weight: 700; letter-spacing: 3px;
+  text-transform: uppercase; color: #555; margin-bottom: 20px;
+}
+.efl-section-title {
+  font-size: clamp(36px, 5vw, 60px); font-weight: 900;
+  line-height: 0.9; letter-spacing: -1px; margin-bottom: 20px;
+}
+.efl-body {
+  font-size: 16px; color: #777; line-height: 1.9; margin-bottom: 0;
+}
+
+/* OVERVIEW */
+.efl-overview-grid {
+  display: grid; grid-template-columns: 1fr 1.4fr;
+  gap: 72px; align-items: start; margin-top: 8px;
+}
+.efl-info-blocks { margin-top: 36px; display: flex; flex-direction: column; gap: 20px; }
+.efl-info-item { display: flex; flex-direction: column; gap: 4px; border-top: 1px solid #1c1c1c; padding-top: 16px; }
+.efl-info-label { font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: #e8e6e0; }
+.efl-info-value { font-size: 15px; color: #666; line-height: 1.7; }
+.efl-walkthrough {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-size: 14px; color: #e8e6e0; font-weight: 600;
+  border: 1px solid #333; padding: 10px 20px; border-radius: 4px;
+  text-decoration: none; margin-top: 4px; width: fit-content;
+  transition: border-color 0.2s, color 0.2s;
+}
+.efl-walkthrough:hover { border-color: #888; }
+
+.efl-screenshot-grid {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+.efl-screen { border-radius: 6px; overflow: hidden; background: #111; }
+.efl-screen img { width: 100%; height: auto; display: block; }
+.efl-caption-bottom { font-size: 13px; color: #444; margin-top: 16px; font-style: italic; }
+
+/* SHOPPING FLOW */
+.efl-flow-grid {
+  display: grid; grid-template-columns: repeat(2, 1fr);
+  gap: 32px 40px;
+}
+.efl-flow-item { display: flex; flex-direction: column; gap: 12px; }
+.efl-flow-caption-title { font-size: 15px; font-weight: 700; color: #e8e6e0; margin: 0; }
+.efl-flow-caption { font-size: 13px; color: #555; line-height: 1.6; margin: 0; }
+
+/* TRUST & SUPPORT */
+.efl-trust-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr) repeat(2, 0.55fr);
+  gap: 16px;
+  align-items: end;
+}
+.efl-trust-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+.efl-screen-laptop {
+  border-radius: 6px; overflow: hidden; background: #111;
+}
+.efl-screen-laptop img { width: 100%; height: auto; display: block; }
+
+.efl-trust-mobile-row {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  margin-top: 16px;
+}
+.efl-screen-mobile {
+  width: 18%;
+  border-radius: 10px; overflow: hidden; background: #111;
+}
+.efl-screen-mobile img { width: 100%; height: auto; display: block; }
+
+/* REFLECTION */
+.efl-reflection-grid {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 80px; margin-top: 40px; margin-bottom: 48px;
+}
+.efl-reflection-heading {
+  font-size: 22px; font-weight: 800; margin-bottom: 20px; color: #e8e6e0;
+}
+.efl-reflection-list { list-style: none; display: flex; flex-direction: column; gap: 12px; }
+.efl-reflection-list li {
+  font-size: 17px; color: #777; padding-left: 20px; position: relative; line-height: 1.7;
+}
+.efl-reflection-list li::before { content: "•"; position: absolute; left: 0; color: #555; }
+.efl-tools-bar {
+  display: flex; gap: 16px; align-items: center;
+  border-top: 1px solid #1c1c1c; padding-top: 24px;
+}
+/* ════════════════════════════════
+   FOOTER
+════════════════════════════════ */
+footer {
+  padding: 48px 64px;
+  border-top: 1px solid #1c1c1c;
+  display: flex; justify-content: space-between; align-items: center;
+  font-size: 11px; color: #3a3a3a;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  nav { padding: 16px 24px; }
+  nav ul { display: none; }
+  #cover, .about-left, #work, #earnforlife-cover, .dual-section { padding: 80px 28px 48px; }
+  .cover-big { font-size: 72px; letter-spacing: -2px; }
+  .cover-meta { right: 28px; top: 88px; }
+  .cover-bottom { flex-direction: column; gap: 20px; align-items: flex-start; padding: 32px 0 0; }
+  #about { grid-template-columns: 1fr; }
+  .about-right { height: 320px; }
+  #work { grid-template-columns: 1fr; gap: 32px; padding: 60px 28px; }
+  #veilmark-cover { grid-template-columns: 1fr; }
+  .veil-left { padding: 80px 28px; }
+  .veil-right { height: 260px; grid-template-rows: 1fr; }
+  .veil-right .img-slot:last-child { display: none; }
+  .two-col, .gtm-section { grid-template-columns: 1fr; padding: 48px 28px; gap: 32px; }
+  .insight-section, .dual-section, .final-stmt { padding: 60px 28px; }
+  .dual-grid, .three-cols { grid-template-columns: 1fr; }
+  .two-images { grid-template-columns: 1fr 1fr; }
+  .rollout-steps { flex-direction: column; align-items: center; }
+  footer { flex-direction: column; gap: 10px; text-align: center; padding: 32px 24px; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#cover" class="logo">Le Doan Tuong Vy — 2026</a>
+  <ul>
+    <li><a href="#about">About</a></li>
+    <li><a href="#work">Work</a></li>
+    <li><a href="#veilmark-cover">Veilmark</a></li>
+    <li><a href="#earnforlife-cover">EarnForLife</a></li>
+  </ul>
+</nav>
+
+<!-- ══════ PAGE 1: COVER ══════ -->
+<section id="cover">
+  <div class="cover-meta fade-up d2">
+    <div class="year">2026</div>
+    <div class="role">E-commerce undergraduate</div>
+    <div class="name">LE DOAN TUONG VY</div>
+  </div>
+
+  <div class="cover-big fade-up">
+    PORTO<br>FOLIO.
+  </div>
+
+  <div class="cover-bottom">
+    <p class="cover-tagline fade-up d1">
+      E-commerce undergraduate eager to enhance my practical knowledge capable of transforming consumer and market insights into meaningful business impacts
+    </p>
+    <div class="cover-contacts fade-up d2">
+      <span>0812 111 025</span>
+      <span>ldtvy06@gmail.com</span>
+      <span>Binh Thanh, Ho Chi Minh City</span>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ PAGE 2: ABOUT ══════ -->
+<section id="about">
+  <div class="about-left">
+    <div class="hello-title fade-up">HELLO. I'M<br>LE DOAN<br>TUONG VY</div>
+
+    <div class="about-section fade-up d1">
+      <h4>Education</h4>
+      <p>Industrial University of Ho Chi Minh City<br>Bachelor of E-commerce | GPA: 3.25 / 4.00</p>
+    </div>
+
+    <div class="about-section fade-up d2">
+      <h4>Certifications</h4>
+      <ul>
+        <li>Basic Information Technology Application Certificate</li>
+        <li>VSTEP B2 – English Proficiency</li>
+      </ul>
+    </div>
+
+    <div class="about-section fade-up d2">
+      <h4>Technical Competencies</h4>
+      <ul>
+        <li>Business Analytics &amp; Data</li>
+        <li>Marketing &amp; Creative</li>
+        <li>Soft Skills &amp; Cognitive Strengths</li>
+      </ul>
+    </div>
+
+    <div class="about-section fade-up d3">
+      <h4>Work Experience</h4>
+      <div class="exp-item">
+        <div class="exp-title">• Short-form Video Editing &amp; Content – XBSports | 2025</div>
+        <div class="exp-desc">Produced and edited 5 short videos/week; adjusted content based on trends and engagement.</div>
+      </div>
+      <div class="exp-item">
+        <div class="exp-title">• Personal E-commerce Project | 2021</div>
+        <div class="exp-desc">Ran a student online store with 100+ orders across beauty, food, fashion, and lifestyle.</div>
+      </div>
+      <div class="exp-item">
+        <div class="exp-title">• Mathematics Instructor – Thang Long Thang Tien Education | 2026 – Present</div>
+        <div class="exp-desc">Taught secondary school math; developed communication and classroom management skills.</div>
+      </div>
+      <div class="exp-item">
+        <div class="exp-title">• Volunteer Team Coordinator | 2022</div>
+        <div class="exp-desc">Led 6–8 members in citizen digital identity support activities for local government.</div>
+      </div>
+    </div>
+
+    <div class="about-contact-bar fade-up d4">
+      CONTACT &nbsp;|&nbsp; 0812 111 025 &nbsp;|&nbsp; ldtvy06@gmail.com &nbsp;|&nbsp; Binh Thanh, Ho Chi Minh City
+    </div>
+  </div>
+
+  <div class="about-right">
+    <img src="profile.jpg" alt="Le Doan Tuong Vy"> 
+    
+  </div>
+</section>
+
+<!-- ══════ PAGE 3: MY SAMPLE WORK ══════ -->
+<section id="work">
+  <div class="work-title-block">
+    <div class="featured-label fade-up">☆ <em>Featured Case Study</em></div>
+    <div class="work-big fade-up d1">MY<br>SAMPLE<br>WORK</div>
+  </div>
+
+  <div class="work-items">
+    <a class="work-item fade-up" href="#veilmark-cover">
+      <span class="work-num">☆ 01</span>
+      <div class="work-info">
+        <h3><span class="star-icon">☆</span> Veilmark • Rethinking School Identity Systems</h3>
+        <p>A B2B concept for modern school merchandise systems balancing branding, personalization, and safer identification.</p>
+      </div>
+    </a>
+    <a class="work-item fade-up d1" href="#earnforlife-cover">
+      <span class="work-num">02</span>
+      <div class="work-info">
+        <h3>EarnForLife • Interior E-commerce Experience</h3>
+        <p>Designed and developed an e-commerce website focused on digital shopping experience, product organization, and customer browsing flow.</p>
+      </div>
+    </a>
+    <a class="work-item fade-up d2" href="#">
+      <span class="work-num">03</span>
+      <div class="work-info">
+        <h3>Yến Sào Nha Trang • Brand Website Development</h3>
+        <p>Developed a branded WordPress website emphasizing local storytelling, trust-driven communication, and product presentation.</p>
+      </div>
+    </a>
+    <a class="work-item fade-up d3" href="#">
+      <span class="work-num">04</span>
+      <div class="work-info">
+        <h3>Home, In Different Ways • Short Film</h3>
+        <p>A short film project exploring family expectations, generational conflict, and emotional understanding through visual storytelling.</p>
+      </div>
+    </a>
+  </div>
+</section>
+
+<!-- ══════ PROJECT 01: VEILMARK COVER ══════ -->
+<section id="veilmark-cover" class="proj-page">
+  <div class="veil-left">
+    <div class="proj-featured fade-up">☆ <em>Featured Case Study</em></div>
+    <div class="proj-label-sm fade-up">PROJECT 01</div>
+    <div class="proj-name-big fade-up">Veilmark</div>
+    <p class="proj-tagline-italic fade-up d1">visible to the right people</p>
+    <p class="proj-subtitle-sm fade-up d1">A B2B SCHOOL MERCHANDISE IDENTITY SYSTEM</p>
+    <div class="tag-row fade-up d2">
+      <span class="tag">Safety</span>
+      <span class="tag">Symbol</span>
+      <span class="tag">School Branding</span>
+    </div>
+  </div>
+  <div class="veil-right">
+    <div class="img-slot"><img src="cover.jpg"></div>
+    <div class="img-slot"><img src="cover1.jpg"></div>
+  </div>
+</section>
+
+<!-- Veilmark: The Tension -->
+<div class="two-col proj-page">
+  <div class="img-slot-rect fade-up"><img src="tenson.jpg"></div>
+  <div class="text-block fade-up d1">
+    <h2>The Tension</h2>
+    <p>Many schools use customized merchandise systems to manage student belongings while reinforcing school identity and consistency.</p>
+    <p>They use visible names to identify children's belongings quickly and efficiently.</p>
+    <p>However, public name visibility may unintentionally expose children's personal information outside school environments.</p>
+    <h3>Real-World Observation</h3>
+    <p>This insight emerged after seeing a parenting video where a mother shared why she stopped printing her child's name on personal belongings after a stranger called the child correctly in public.</p>
+    <p>The child immediately responded — highlighting how familiar cues such as names can unintentionally create a false sense of trust and familiarity.</p>
+  </div>
+</div>
+
+<!-- Veilmark: Consumer Insight -->
+<div class="insight-section fade-up">
+  <h2 class="insight-headline">Identification creates convenience —<br>but also visibility.</h2>
+  <div class="two-images">
+    <div class="img-slot-rect" ><img src="tenson1.jpg"></div>
+    <div class="img-slot-rect" ><img src="tenson2.jpg"></div>
+  </div>
+  <div class="insight-text">
+    <h4>Consumer Insight</h4>
+    <p>Schools and parents both want kids' names on merch — </p>
+    <p>schools for identification, parents for personalization — </p>
+    <p>but parents fear it's also a stranger's first introduction to their child.</p>
+    <p class="quote-small" style="font-size: 15px; color: #3a3a3a; font-style: italic; ">"Risk elimination is unrealistic. Risk reduction through controlled visibility is achievable."</p>
+  </div>
+</div>
+
+<div class="dual-section fade-up">
+  <p class="dual-title">VEILMARK – A B2B School Merchandise Identity System</p>
+  <p class="dual-sub">A Dual Identity System</p>
+  <div class="dual-grid">
+    <div>
+      <p class="dual-col-label">Public-facing layer<span>Symbol-based identification</span></p>
+      <div class="img-slot-rect"><img src="public.png"></div>
+    </div>
+    <div class="dual-divider"></div>
+    <div>
+      <p class="dual-col-label">Internal layer<span>Student name / ID information</span></p>
+      <div class="img-slot-rect"><img src="inter.jpg"></div>
+    </div>
+    <div>
+      <p class="dual-note" style="font-size: 14px;color: #888;font-style: italic; text-align: center;">With this system, the risk of children's information being leaked is significantly reduced.</p>
+      <div class="img-slot-rect"><img src="inter1.jpg"></div>
+    </div>
+  </div>
+  <div class="framework-row">
+    <div class="framework-left">
+      <h5>Design Principles — The 3S Framework</h5>
+      <div class="three-cols">
+        <div class="col"><h6>Safety</h6><p>Protecting children's information through controlled visibility.</p></div>
+        <div class="col"><h6>Symbol</h6><p>Creating recognizable and emotionally engaging personal identifiers.</p></div>
+        <div class="col"><h6>School Branding</h6><p>Building unified and differentiated school identity systems.</p></div>
+      </div>
+    </div>
+    <div class="strategic-right">
+      <h5>Strategic Value</h5>
+      <p><strong>Schools</strong> – Branding + differentiation<br>
+      <strong>Parents</strong> – Safety + peace of mind<br>
+      <strong>Children</strong> – Recognition + belonging</p>
+    </div>
+  </div>
+</div>
+
+<!-- Veilmark: Go-to-Market -->
+<div class="gtm-section fade-up">
+  <div class="gtm-left">
+    <h4>Go-to-Market Strategy</h4>
+    <p class="target-label">Target Partners</p>
+    <ul>
+      <li>Private preschools</li>
+      <li>Kindergartens</li>
+      <li>Education centers</li>
+      <li>Primary schools</li>
+    </ul>
+    <p class="targeting-note">⇒ Targeting schools seeking stronger branding consistency and modernized student merchandise systems.</p>
+    
+  </div>
+  <div class="gtm-right">
+    <p class="rollout-title">Rollout Approach</p>
+    <div class="rollout-steps">
+      <div class="rollout-step">
+        <div class="rollout-circle s"><div><strong>01 – Pilot</strong><p>Launch with selected classrooms using themed identity systems.</p></div></div>
+      </div>
+      <div class="rollout-step">
+        <div class="rollout-circle m"><div><strong>02 — Feedback</strong><p>Collect parent, teacher, and operational feedback.</p></div></div>
+      </div>
+      <div class="rollout-step">
+        <div class="rollout-circle l"><div><strong>03 — Scale</strong><p>Expand into school-wide merchandise and branding systems.</p></div></div>
+      </div>
+    </div>
+    <div class="rollout-line"></div>
+    <p class="longterm" style="font-size: 13px; color: #444; font-style: italic; margin-top: 20px; text-align: right;">*Long-term opportunity: School-wide identity ecosystems</p>
+  </div>
+  
+</div>
+
+<!-- Veilmark: Final Statement -->
+<div class="final-stmt fade-up">
+  <h2>Beyond Identification</h2>
+  <p class="sub">Veilmark rethinks how schools identify children by balancing:</p>
+  <ul>
+    <li>safer recognition</li>
+    <li>emotional personalization</li>
+    <li>operational convenience</li>
+    <li>school branding</li>
+  </ul>
+  <p class="final-big">FINAL STATEMENT</p>
+  <p class="final-tagline">We help schools build a stronger brand identity while keeping every child safely recognized.</p>
+  <p class="final-footnote">Designed as a strategic business concept for modern school identity systems.</p>
+</div>
+
+<!-- ══════ PROJECT 02: EARNFORLIFE COVER ══════ -->
+<section id="earnforlife-cover" class="proj-page">
+  <div class="efl-proj-label fade-up">PROJECT 02 <span class="efl-meta">Team Project • 2026 • HTML • CSS • JavaScript</span></div>
+  <div class="efl-name fade-up">EarnForLife</div>
+  <p class="efl-desc fade-up d1">Modern furniture ecommerce website focused on clean shopping experience and customer trust.</p>
+
+  <div class="mockup-wrapper">
+    <div class="mockup-main">
+      <img src="cv1.png" />
+    </div>
+    <div class="mockup-stack">
+      <div class="stack-item"><img src="cv2.png" /></div>
+      <div class="stack-item"><img src="cv3.png" /></div>
+    </div>
+    <div class="mockup-phone">
+      <img src="cv4.png" />
+    </div>
+  </div>
+</section>
+<!-- ══════ EARNFORLIFE: OVERVIEW ══════ -->
+<div class="efl-section fade-up">
+  <h2 class="efl-section-title">OVERVIEW</p>
+  <div class="efl-overview-grid">
+    <div class="efl-overview-left">
+      <p class="efl-body">Designed and developed a furniture ecommerce website that helps users browse collections, explore products, and complete purchases more smoothly.</p>
+      <div class="efl-info-blocks">
+        <div class="efl-info-item">
+          <span class="efl-info-label">Role</span>
+          <span class="efl-info-value">UI Design • Front-end Development • Content Structure</span>
+        </div>
+        <div class="efl-info-item">
+          <span class="efl-info-label">Features</span>
+          <span class="efl-info-value">Cart • Checkout • Login • Chatbox • FAQ • Responsive Layout</span>
+        </div>
+        <!-- <div class="efl-info-item">
+          <span class="efl-info-label">Walkthrough</span>
+          <a href="#" class="efl-walkthrough">▶ View Website Walkthrough</a>
+        </div> -->
+      </div>
+    </div>
+    <div class="efl-overview-right">
+      <div class="efl-screenshot-grid">
+        <div class="efl-screen"><img src="p21.png" alt="Homepage"></div>
+        <div class="efl-screen"><img src="p22.png" alt="Homepage 2"></div>
+        <div class="efl-screen"><img src="p23.png" alt="Homepage 3"></div>
+        <div class="efl-screen"><img src="p24.png" alt="Homepage 4"></div>
+      </div>
+      <p class="efl-caption-bottom">Focused on creating a clean and modern browsing experience.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ══════ EARNFORLIFE: SHOPPING FLOW ══════ -->
+<div class="efl-section efl-section-dark fade-up">
+  
+  <h2 class="efl-section-title">Shopping Flow</h2>
+  <p class="efl-body" style="max-width:600px;margin-bottom:48px;">Structured a smoother browsing-to-checkout experience for online furniture shopping.</p>
+  
+    <div class="efl-flow-item">
+     
+      <p class="efl-flow-caption-title">Cart</p>
+      <p class="efl-flow-caption">Easy product review before checkout.</p>
+       <div class="efl-screen"><img src="p32.png" alt="Cart"></div>
+    </div>
+   
+    <div class="efl-flow-item">
+      
+      <p class="efl-flow-caption-title">Order Summary</p>
+      <p class="efl-flow-caption">Clean pricing and order information layout.</p>
+      <div class="efl-screen"><img src="p31.png" alt="Order Summary"></div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════ EARNFORLIFE: TRUST & SUPPORT ══════ -->
+<div class="efl-section fade-up">
+  <h2 class="efl-section-title">TRUST & SUPPORT</p>
+  <p class="efl-body" style="max-width:640px;margin-bottom:48px;">Added support-focused sections to improve customer confidence and shopping experience.</p>
+  <div class="efl-trust-grid">
+  <div class="efl-screen-laptop"><img src="p41.png"></div>
+  <div class="efl-screen-laptop"><img src="p43.png"></div>
+  <div class="efl-screen-laptop"><img src="p44.png"></div>
+</div>
+<div class="efl-trust-mobile-row">
+  <div class="efl-screen-mobile"><img src="cv4.png"></div>
+  <div class="efl-screen-mobile"><img src="P45.png"></div>
+</div>
+</div>
+
+<!-- ══════ EARNFORLIFE: REFLECTION ══════ -->
+<div class="efl-section efl-reflection fade-up">
+
+  <h2 class="efl-section-title">Reflection</h2>
+  <div class="efl-reflection-grid">
+    <div class="efl-reflection-left">
+      <p class="efl-reflection-heading">Learned</p>
+      <ul class="efl-reflection-list">
+        <li>Ecommerce UX flow</li>
+        <li>Information hierarchy</li>
+        <li>Responsive web structure</li>
+      </ul>
+    </div>
+    <div class="efl-reflection-right">
+      <p class="efl-reflection-heading">If I were to rebuild...</p>
+      <p class="efl-body">I would improve product filtering and create a more personalized browsing experience for users.</p>
+    </div>
+  </div>
+  <div class="efl-tools-bar">
+    <span class="efl-info-label">Tools</span>
+    <span class="efl-info-value">HTML • CSS • JavaScript • Canva</span>
+  </div>
+</div>
+<!-- ══════ FOOTER ══════ -->
+<footer>
+  <span>© Le Doan Tuong Vy</span>
+  <span>ldtvy06@gmail.com</span>
+  <span>0812 111 025</span>
+</footer>
+
+<script>
+const obs = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+}, { threshold: 0.08 });
+document.querySelectorAll('.fade-up').forEach(el => obs.observe(el));
+
+// Nav highlight
+const navLinks = document.querySelectorAll('nav ul a');
+window.addEventListener('scroll', () => {
+  let cur = '';
+  document.querySelectorAll('section[id], div[id]').forEach(s => {
+    if (window.scrollY >= s.offsetTop - 120) cur = s.id;
+  });
+  navLinks.forEach(a => {
+    a.style.color = a.getAttribute('href') === '#' + cur ? '#e8e6e0' : '';
+  });
+});
+</script>
+</body>
+</html>
