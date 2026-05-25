@@ -173,6 +173,7 @@ nav ul a:hover { color: #e8e6e0; }
   grid-template-columns: 400px 1fr;
   gap: 80px;
   align-content: center;
+  margin-left: 30px;
 }
 
 .work-title-block { display: flex; flex-direction: column; justify-content: flex-start; padding-top: 8px; }
@@ -181,10 +182,11 @@ nav ul a:hover { color: #e8e6e0; }
   margin-bottom: 12px; display: flex; align-items: center; gap: 6px;
 }
 .work-big {
-  font-size: clamp(52px, 7vw, 88px);
+  font-size: clamp(52px, 7vw, 90px);
   font-weight: 900;
   line-height: 0.88;
   letter-spacing: -2px;
+  
 }
 
 .work-items { display: flex; flex-direction: column; }
@@ -214,12 +216,14 @@ nav ul a:hover { color: #e8e6e0; }
   display: grid;
   grid-template-columns: 50% 50%;
   align-items: stretch;
+  
 }
 
 .veil-left {
   padding: 80px 64px;
   display: flex; flex-direction: column; justify-content: center;
   background: #0a0a0a;
+  margin-left: 60px;
 }
 .proj-label-sm { font-size: 15px; letter-spacing: 3px; text-transform: uppercase; color: #555; margin-bottom: 6px; }
 .proj-featured { font-size: 17px; color: #666; font-style: italic; margin-bottom: 18px; display: flex; align-items: center; gap: 6px; }
@@ -245,8 +249,9 @@ nav ul a:hover { color: #e8e6e0; }
 .veil-right .img-slot {
   overflow: hidden;
   aspect-ratio: 5/4;
-  width: 80%;
+  width: 70%;
   margin-left: auto;
+  margin-right: 60px;
   border-radius: 8px;
 }
 .veil-right .img-slot img {
@@ -515,13 +520,15 @@ nav ul a:hover { color: #e8e6e0; }
     font-weight: 300;
     margin-bottom: 40px;
     max-width: 340px;
-  }
+      font-size: 20px;
+}
+
   .info-block { margin-bottom: 28px; }
   .info-block-label {
     font-size: 10px;
     letter-spacing: 3px;
     text-transform: uppercase;
-    color: var(--accent);
+    color: #444;
     font-weight: 500;
     margin-bottom: 6px;
   }
@@ -559,25 +566,38 @@ nav ul a:hover { color: #e8e6e0; }
   .overview-duo .img-slot { height: 200px; }
 
   /* ─── PAGE 3 — SHOPPING FLOW ─── */
-  .flow-header { margin-bottom: 48px; }
-  .flow-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-  }
-  .flow-img {
-    width: 100%;
-    height: 260px;
-    margin-bottom: 12px;
-  }
-  .flow-caption-title {
-    font-size: 12px;
-    font-weight: 500;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    color: var(--black);
-    margin-bottom: 4px;
-  }
+  .flow-grid{
+  display:flex;
+  justify-content:center;
+  gap:60px;
+}
+
+.flow-item{
+  width:700px;
+}
+
+.flow-caption-title{
+  font-size:14px;
+  font-weight:700;
+  margin-bottom:6px;
+}
+
+.flow-caption{
+  font-size:13px;
+  color:#666;
+  margin-bottom:14px;
+  line-height:1.7;
+}
+
+.flow-img{
+  border-radius:8px;
+  overflow:hidden;
+}
+
+.flow-img img{
+  width:100%;
+  display:block;
+}
 
   /* ─── PAGE 4 — TRUST & SUPPORT ─── */
   .trust-header { margin-bottom: 48px; }
@@ -757,8 +777,20 @@ nav ul a:hover { color: #e8e6e0; }
 }
 .efl-info-blocks { margin-top: 36px; display: flex; flex-direction: column; gap: 20px; }
 .efl-info-item { display: flex; flex-direction: column; gap: 4px; border-top: 1px solid #1c1c1c; padding-top: 16px; }
-.efl-info-label { font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: #e8e6e0; }
-.efl-info-value { font-size: 15px; color: #666; line-height: 1.7; }
+.efl-info-label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #e8e6e0;
+}
+
+.efl-info-value {
+  font-size: 14px;
+  font-weight: 400;
+  color: #555;
+  line-height: 1.7;
+}
 .efl-walkthrough {
   display: inline-flex; align-items: center; gap: 8px;
   font-size: 14px; color: #e8e6e0; font-weight: 600;
@@ -775,6 +807,7 @@ nav ul a:hover { color: #e8e6e0; }
 .efl-screen { border-radius: 6px; overflow: hidden; background: #111; }
 .efl-screen img { width: 100%; height: auto; display: block; }
 .efl-caption-bottom { font-size: 13px; color: #444; margin-top: 16px; font-style: italic; }
+.efl-body { font-size: 15px; font-weight: 400; color: #555; line-height: 1.8; }
 
 /* SHOPPING FLOW */
 .efl-flow-grid {
@@ -831,6 +864,932 @@ nav ul a:hover { color: #e8e6e0; }
   display: flex; gap: 16px; align-items: center;
   border-top: 1px solid #1c1c1c; padding-top: 24px;
 }
+
+/* ==================================================
+   SHARED PROJECT STYLE
+   Project 03 + Project 04
+================================================== */
+
+.project-section{
+  padding:80px 64px;
+  border-top:1px solid #1c1c1c;
+}
+.drgcover-section{
+  padding:10px 40px 64px 64px;
+  border-top:1px solid #1c1c1c;
+}
+
+.project-cover{
+  display:grid;
+  grid-template-columns:1.1fr 0.9fr;
+  gap:60px;
+  align-items:center;
+  min-height:100vh;
+}
+
+.project-label{
+  font-size:15px;
+  letter-spacing:3px;
+  text-transform:uppercase;
+  color:#555;
+  margin-bottom:10px;
+}
+
+.project-title{
+  font-size:clamp(64px,8vw,100px);
+  font-weight:900;
+  line-height:.9;
+  margin-bottom:20px;
+}
+
+.project-desc{
+  color:#777;
+  line-height:1.9;
+  max-width:650px;
+  margin-bottom:30px;
+}
+
+.project-tags{
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+}
+
+.project-tag{
+  border:1px solid #2a2a2a;
+  padding:8px 14px;
+  border-radius:30px;
+  font-size:12px;
+  color:#888;
+}
+
+.project-btn{
+  display:inline-block;
+  padding:12px 22px;
+  border:1px solid #444;
+  color:#e8e6e0;
+  text-decoration:none;
+  font-size:13px;
+}
+
+.project-btn:hover{
+  border-color:#888;
+}
+
+.project-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:60px;
+  align-items:start;
+}
+
+.project-content h2{
+  font-size:42px;
+  margin-bottom:20px;
+}
+
+.project-content h3{
+  font-size:22px;
+  margin-top:30px;
+  margin-bottom:10px;
+}
+
+.project-content p{
+  color:#777;
+  line-height:1.9;
+  margin-bottom:14px;
+}
+
+.project-content ul{
+  padding-left:18px;
+}
+
+.project-content li{
+  color:#777;
+  margin-bottom:10px;
+  line-height:1.8;
+}
+
+.project-gallery{
+   display: grid; grid-template-columns: repeat(2, 1fr);
+  gap: 32px 40px;
+}
+
+.project-image{
+  background:#111;
+  border-radius:8px;
+  overflow:hidden;
+}
+
+.project-image img{
+  width:100%;
+  display:block;
+}
+
+.highlight-box{
+  padding:32px;
+  background:#060606;
+  border:1px solid #1c1c1c;
+  border-radius:10px;
+}
+
+.timeline{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:14px;
+}
+
+.timeline-item{
+  border:1px solid #1c1c1c;
+  padding:18px;
+  border-radius:8px;
+}
+
+.timeline-number{
+  color:#888;
+  font-size:12px;
+  margin-bottom:8px;
+}
+
+.timeline-title{
+  font-size:14px;
+  font-weight:600;
+}
+
+.tools-bar{
+  border-top:1px solid #1c1c1c;
+  margin-top:40px;
+  padding-top:24px;
+}
+
+@media(max-width:900px){
+
+.rs-content{
+  grid-template-columns:1fr;
+}
+
+.rs-gallery{
+  grid-template-columns:1fr 1fr;
+}
+
+.video-frames-grid{
+  grid-template-columns:1fr 1fr;
+}
+
+}
+
+/* bo sung them/
+/* ===== SECTION ===== */
+.rs-section{
+  padding:80px 64px;
+  border-top:1px solid #1c1c1c;
+}
+
+/* ===== TEXT ===== */
+.rs-content{
+  max-width:1100px;
+  margin:0 auto 50px;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:60px;
+}
+
+.rs-block h3{
+  font-size:20px;
+  font-weight:700;
+  margin-bottom:12px;
+}
+
+.rs-block p,
+.rs-block li{
+  font-size:15px;
+  color:#777;
+  line-height:1.8;
+}
+
+.rs-block ul{
+  padding-left:18px;
+}
+
+/* ===== IMAGES ===== */
+.rs-gallery{
+  display:flex;
+  justify-content:center;
+  gap:12px;
+  flex-wrap:nowrap;
+}
+
+.rs-image{
+  width:230px;   /* chỉnh nhỏ hơn nếu muốn */
+  flex-shrink:0;
+}
+
+.rs-image img{
+  width:100%;
+  height:auto;
+  display:block;
+  border-radius:6px;
+}
+/* ===== PRODUCTION PROCESS ===== */
+
+.video-frames-section{
+  padding:80px 64px;
+  border-top:1px solid #1c1c1c;
+}
+
+.video-frames-header{
+  text-align:center;
+  margin-bottom:50px;
+}
+
+.video-frames-header h3{
+  font-size:22px;
+  font-weight:700;
+  margin-bottom:12px;
+}
+
+.video-frames-grid{
+  max-width:1200px;
+  margin:0 auto;
+
+  display:grid;
+  grid-template-columns:repeat(4, 1fr);
+  gap:16px;
+}
+
+.frame{
+  overflow:hidden;
+  border-radius:6px;
+}
+
+.frame img{
+  width:300px;
+  height:auto;
+  display:block;
+}
+/* ===== EDITING & REFLECTION ===== */
+
+.er-section{
+  padding:80px 64px;
+  border-top:1px solid #1c1c1c;
+}
+
+.er-grid{
+  max-width:1200px;
+  margin:0 auto 60px;
+
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:80px;
+  align-items:center;
+}
+
+.er-content{
+  padding:40px;
+  border:1px solid #1c1c1c;
+  border-radius:12px;
+  background:#0a0a0a;
+}
+
+.er-content h2{
+  font-size:42px;
+  margin-bottom:28px;
+}
+
+.er-content h3{
+  font-size:18px;
+  margin-top:30px;
+  margin-bottom:10px;
+}
+
+.er-content ul{
+  list-style:none;
+  padding:0;
+}
+
+.er-content li{
+  color:#888;
+  margin-bottom:14px;
+  line-height:1.8;
+  padding-left:20px;
+  position:relative;
+}
+
+.er-content li::before{
+  content:"•";
+  position:absolute;
+  left:0;
+  color:#fff;
+}
+
+.er-content p{
+  color:#777;
+}
+
+.er-image{
+  overflow:hidden;
+  border-radius:12px;
+}
+
+.er-image img{
+  width:100%;
+  display:block;
+}
+
+.er-box{
+  max-width:1200px;
+  margin:0 auto;
+
+  padding:40px;
+  border:1px solid #1c1c1c;
+  border-radius:12px;
+  background:#060606;
+}
+
+.er-box h2{
+  margin-bottom:20px;
+}
+
+.er-box ul{
+  padding-left:18px;
+}
+
+.er-box li{
+  color:#888;
+  line-height:1.8;
+}
+
+@media(max-width:900px){
+
+.er-grid{
+  grid-template-columns:1fr;
+  gap:40px;
+}
+
+.er-section{
+  padding:60px 28px;
+}
+
+} */
+
+/* ==================================================
+   ILIA BEAUTY — PROJECT 03
+   Paste vào cuối CSS file gốc của bạn
+   PRJ4 (DR.G) giữ nguyên hoàn toàn
+================================================== */
+
+
+/* ─────────────────────────────────────────────────
+   PAGE 02 — BUSINESS QUESTION + KPIs
+   #business (không có class project-section)
+───────────────────────────────────────────────── */
+
+#business {
+  padding: 80px 64px;
+  border-top: 1px solid #1c1c1c;
+  background: #080808;
+}
+
+#business .section-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+#business .page-label {
+  font-size: 11px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #555;
+  margin-bottom: 48px;
+  display: block;
+}
+
+#business .biz-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: start;
+}
+
+#business .section-heading {
+  font-size: clamp(36px, 4vw, 52px);
+  font-weight: 900;
+  line-height: 1.0;
+  letter-spacing: -1px;
+  margin-bottom: 20px;
+  color: #e8e6e0;
+}
+
+#business .section-heading em {
+  font-style: italic;
+  font-weight: 300;
+  color: #666;
+}
+
+#business .body-text {
+  font-size: 14px;
+  color: #777;
+  line-height: 1.85;
+  margin-bottom: 32px;
+}
+
+#business .obj-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+#business .obj-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  font-size: 14px;
+  color: #777;
+  line-height: 1.65;
+}
+
+#business .obj-num {
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  color: #444;
+  min-width: 20px;
+  padding-top: 3px;
+  font-family: monospace;
+}
+
+#business .kpi-label {
+  font-size: 11px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #555;
+  margin-bottom: 16px;
+  display: block;
+}
+
+#business .kpi-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  background: #1c1c1c;
+  border: 1px solid #1c1c1c;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+#business .kpi-item {
+  padding: 16px 20px;
+  background: #0f0f0f;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 12px;
+  align-items: center;
+  transition: background 0.15s;
+}
+
+#business .kpi-item:hover { background: #141414; }
+
+#business .kpi-name {
+  font-size: 14px;
+  font-weight: 600;
+  color: #e8e6e0;
+  margin-bottom: 4px;
+}
+
+#business .kpi-desc {
+  font-size: 12px;
+  color: #555;
+  line-height: 1.6;
+}
+
+#business .kpi-badge {
+  font-size: 11px;
+  font-family: monospace;
+  letter-spacing: 0.06em;
+  padding: 4px 10px;
+  background: #1a1a1a;
+  color: #777;
+  border: 1px solid #2a2a2a;
+  border-radius: 4px;
+  white-space: nowrap;
+}
+
+/* ─────────────────────────────────────────────────
+   PAGE 03 — ANALYSIS PROCESS (ILIA only)
+   Dùng :has() để scope đúng section ILIA
+   mà không ảnh hưởng DR.G Content Structure
+───────────────────────────────────────────────── */
+
+/* Section ILIA chứa .tl-desc thì mới apply */
+.project-section:has(.tl-desc) {
+  background: #060606;
+}
+
+.tl-desc {
+  font-size: 12px;
+  color: #555;
+  line-height: 1.7;
+  margin-top: 8px;
+}
+
+/* /* ─────────────────────────────────────────────────
+   PAGE 04 — FINDINGS + RECOMMENDATIONS
+   #findings (không có class project-section)
+───────────────────────────────────────────────── */
+#findings {
+  padding: 80px 64px;
+  border-top: 1px solid #1c1c1c;
+  background: #080808;
+}
+ 
+#findings .section-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+ 
+#findings .page-label {
+  font-size: 11px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #555;
+  margin-bottom: 48px;
+  display: block;
+}
+ 
+#findings .findings-header {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  margin-bottom: 48px;
+  align-items: end;
+}
+ 
+#findings .section-heading {
+  font-size: clamp(36px, 4vw, 52px);
+  font-weight: 900;
+  line-height: 1.0;
+  letter-spacing: -1px;
+  color: #e8e6e0;
+}
+ 
+#findings .section-heading em {
+  font-style: italic;
+  font-weight: 300;
+  color: #666;
+}
+ 
+#findings .stat-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background: #1c1c1c;
+  border: 1px solid #1c1c1c;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 16px;
+}
+ 
+#findings .stat-cell {
+  background: #0f0f0f;
+  padding: 20px 16px;
+  text-align: center;
+}
+ 
+#findings .stat-num {
+  font-size: 28px;
+  font-weight: 900;
+  color: #e8e6e0;
+  line-height: 1;
+  margin-bottom: 6px;
+  letter-spacing: -1px;
+}
+ 
+#findings .stat-lbl {
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #444;
+  font-family: monospace;
+}
+ 
+#findings .body-text {
+  font-size: 13px;
+  color: #555;
+  line-height: 1.75;
+}
+ 
+#findings .findings-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1px;
+  background: #1c1c1c;
+  border: 1px solid #1c1c1c;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 48px;
+}
+ 
+#findings .finding-card {
+  background: #0a0a0a;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  transition: background 0.15s;
+}
+ 
+#findings .finding-card:hover { background: #0f0f0f; }
+ 
+#findings .finding-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+}
+ 
+#findings .finding-idx {
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #3a3a3a;
+  font-family: monospace;
+}
+ 
+#findings .finding-sig {
+  font-size: 10px;
+  font-family: monospace;
+  padding: 3px 8px;
+  border-radius: 4px;
+  white-space: nowrap;
+}
+ 
+#findings .sig-yes {
+  background: #0d1f14;
+  color: #4a9e6a;
+  border: 1px solid #1a3324;
+}
+ 
+#findings .sig-no {
+  background: #141414;
+  color: #444;
+  border: 1px solid #222;
+}
+ 
+#findings .finding-title {
+  font-size: 15px;
+  font-weight: 600;
+  color: #e8e6e0;
+  line-height: 1.35;
+}
+ 
+#findings .finding-body {
+  font-size: 13px;
+  color: #666;
+  line-height: 1.75;
+}
+ 
+#findings .finding-stat {
+  font-size: 10px;
+  font-family: monospace;
+  color: #333;
+  letter-spacing: 0.04em;
+  margin-top: auto;
+  padding-top: 8px;
+  border-top: 1px solid #1a1a1a;
+}
+ 
+#findings .evidence-label {
+  font-size: 11px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #555;
+  margin-bottom: 16px;
+  display: block;
+}
+ 
+#findings .evidence-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background: #1c1c1c;
+  border: 1px solid #1c1c1c;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 48px;
+}
+ 
+#findings .evidence-item {
+  background: #0a0a0a;
+  display: flex;
+  flex-direction: column;
+}
+ 
+#findings .evidence-img {
+  width: 100%;
+  aspect-ratio: 4/3;
+  object-fit: contain;
+  background: #111;
+  padding: 10px;
+  border-bottom: 1px solid #1c1c1c;
+  display: block;
+}
+ 
+#findings .evidence-cap {
+  padding: 10px 14px;
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #3a3a3a;
+  font-family: monospace;
+}
+ 
+#findings .dashboard-frame {
+  border: 1px solid #1c1c1c;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 48px;
+}
+ 
+#findings .dashboard-frame img {
+  width: 100%;
+  display: block;
+}
+ 
+#findings .dashboard-cap {
+  padding: 12px 16px;
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #3a3a3a;
+  font-family: monospace;
+  background: #0a0a0a;
+  border-top: 1px solid #1c1c1c;
+}
+ 
+#findings .reco-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1px;
+  background: #1c1c1c;
+  border: 1px solid #1c1c1c;
+  border-radius: 8px;
+  overflow: hidden;
+}
+ 
+#findings .reco-card {
+  background: #0a0a0a;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  transition: background 0.15s;
+}
+ 
+#findings .reco-card:hover { background: #0f0f0f; }
+ 
+#findings .reco-r {
+  font-size: 11px;
+  letter-spacing: 0.15em;
+  font-family: monospace;
+  color: #2a2a2a;
+  text-transform: uppercase;
+}
+ 
+#findings .reco-title {
+  font-size: 15px;
+  font-weight: 600;
+  color: #e8e6e0;
+  line-height: 1.3;
+}
+ 
+#findings .reco-body {
+  font-size: 13px;
+  color: #666;
+  line-height: 1.75;
+}
+/* ==================================================
+REFERENCES
+================================================== */
+
+.references-section{
+  padding:80px 64px;
+  border-top:1px solid #1c1c1c;
+}
+
+.references-container{
+  max-width:1200px;
+  margin:0 auto;
+}
+
+.references-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:40px;
+  margin-top:40px;
+  align-items:start;
+}
+
+.reference-block h3{
+  font-size:16px;
+  margin-bottom:14px;
+  text-transform:uppercase;
+  letter-spacing:1px;
+}
+
+.reference-block p,
+.reference-block li{
+  color:#777;
+  line-height:1.8;
+  font-size:14px;
+}
+
+.reference-block ul{
+  list-style:none;
+  padding:0;
+  margin:0;
+}
+
+.reference-block a{
+  color:#777;
+  text-decoration:none;
+  transition:.25s;
+}
+
+.reference-block a:hover{
+  color:#e8e6e0;
+}
+
+@media(max-width:900px){
+
+.references-grid{
+  grid-template-columns:1fr 1fr;
+  gap:32px;
+}
+
+}
+
+@media(max-width:600px){
+
+.references-grid{
+  grid-template-columns:1fr;
+}
+
+}
+
+#closing{
+  min-height:100vh;
+  background:#0a0a0a;
+  padding:80px 64px 64px;
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+}
+
+.closing-big{
+  font-size:clamp(110px,19vw,260px);
+  font-weight:900;
+  line-height:.85;
+  letter-spacing:-4px;
+  color:#d8d6d0;
+
+  flex:1;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+}
+
+.closing-bottom{
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-end;
+
+  padding-top:48px;
+  border-top:1px solid #1c1c1c;
+}
+
+.closing-tagline{
+  max-width:500px;
+  color:#888;
+  font-size:13px;
+  line-height:1.8;
+  white-space: nowrap;
+}
+
+.closing-contacts{
+  display:flex;
+  gap:40px;
+}
+
+.closing-contacts a{
+  color:#666;
+  text-decoration:none;
+  font-size:12px;
+}
+
+.closing-contacts a:hover{
+  color:#d8d6d0;
+}
 /* ════════════════════════════════
    FOOTER
 ════════════════════════════════ */
@@ -869,12 +1828,14 @@ footer {
 
 <!-- NAV -->
 <nav>
-  <a href="#cover" class="logo">Le Doan Tuong Vy — 2026</a>
+  <a href="#cover" class="logo">Le Doan Tuong Vy — PORTFOLIO</a>
   <ul>
     <li><a href="#about">About</a></li>
     <li><a href="#work">Work</a></li>
     <li><a href="#veilmark-cover">Veilmark</a></li>
     <li><a href="#earnforlife-cover">EarnForLife</a></li>
+    <li><a href="#customeranalytics-cover">ILIA</a></li>
+    <li><a href="#drg-cover">DrG</a></li>
   </ul>
 </nav>
 
@@ -926,6 +1887,7 @@ footer {
         <li>Business Analytics &amp; Data</li>
         <li>Marketing &amp; Creative</li>
         <li>Soft Skills &amp; Cognitive Strengths</li>
+        <li>AI-assisted Research &amp; Content Development</li>
       </ul>
     </div>
 
@@ -982,21 +1944,22 @@ footer {
         <p>Designed and developed an e-commerce website focused on digital shopping experience, product organization, and customer browsing flow.</p>
       </div>
     </a>
-    <a class="work-item fade-up d2" href="#">
-      <span class="work-num">03</span>
-      <div class="work-info">
-        <h3>Yến Sào Nha Trang • Brand Website Development</h3>
-        <p>Developed a branded WordPress website emphasizing local storytelling, trust-driven communication, and product presentation.</p>
-      </div>
-    </a>
-    <a class="work-item fade-up d3" href="#">
-      <span class="work-num">04</span>
-      <div class="work-info">
-        <h3>Home, In Different Ways • Short Film</h3>
-        <p>A short film project exploring family expectations, generational conflict, and emotional understanding through visual storytelling.</p>
-      </div>
-    </a>
-  </div>
+     <a class="work-item fade-up d2" href="#customeranalytics-cover">
+    <span class="work-num">03</span>
+    <div class="work-info">
+      <h3>ILIA Beauty • Consumer Insights & Retention Analytics</h3>
+      <p>Exploring customer behavior, purchase patterns, and churn indicators through statistical analysis and dashboard visualization.</p>
+    </div>
+  </a>
+
+  <a class="work-item fade-up d3" href="#drg-cover">
+    <span class="work-num">04</span>
+    <div class="work-info">
+      <h3>DR.G Moisturizer • Short-Form Content Production</h3>
+      <p>Independently created a short-form product introduction video, covering product research, content planning, scripting, filming, editing, and final presentation.</p>
+    </div>
+  </a>
+</div>
 </section>
 
 <!-- ══════ PROJECT 01: VEILMARK COVER ══════ -->
@@ -1154,7 +2117,7 @@ footer {
 </section>
 <!-- ══════ EARNFORLIFE: OVERVIEW ══════ -->
 <div class="efl-section fade-up">
-  <h2 class="efl-section-title">OVERVIEW</p>
+  <h2 class="efl-section-title">OVERVIEW</h2>
   <div class="efl-overview-grid">
     <div class="efl-overview-left">
       <p class="efl-body">Designed and developed a furniture ecommerce website that helps users browse collections, explore products, and complete purchases more smoothly.</p>
@@ -1167,10 +2130,10 @@ footer {
           <span class="efl-info-label">Features</span>
           <span class="efl-info-value">Cart • Checkout • Login • Chatbox • FAQ • Responsive Layout</span>
         </div>
-        <!-- <div class="efl-info-item">
+        <div class="efl-info-item">
           <span class="efl-info-label">Walkthrough</span>
-          <a href="#" class="efl-walkthrough">▶ View Website Walkthrough</a>
-        </div> -->
+          <a href="https://youtu.be/FX8S--gHfa8" class="efl-walkthrough" target="_blank">▶ View Website Walkthrough</a>
+        </div>
       </div>
     </div>
     <div class="efl-overview-right">
@@ -1191,25 +2154,30 @@ footer {
   <h2 class="efl-section-title">Shopping Flow</h2>
   <p class="efl-body" style="max-width:600px;margin-bottom:48px;">Structured a smoother browsing-to-checkout experience for online furniture shopping.</p>
   
-    <div class="efl-flow-item">
-     
-      <p class="efl-flow-caption-title">Cart</p>
-      <p class="efl-flow-caption">Easy product review before checkout.</p>
-       <div class="efl-screen"><img src="p32.png" alt="Cart"></div>
+  <div class="flow-grid">
+
+    <div class="flow-item">
+        <p class="flow-caption-title">Cart</p>
+        <p class="flow-caption">Easy product review before checkout.</p>
+      <div class="flow-img">
+        <img src="p32.png" alt="">
+      </div>
     </div>
-   
-    <div class="efl-flow-item">
-      
-      <p class="efl-flow-caption-title">Order Summary</p>
-      <p class="efl-flow-caption">Clean pricing and order information layout.</p>
-      <div class="efl-screen"><img src="p31.png" alt="Order Summary"></div>
+
+    <div class="flow-item">
+      <p class="flow-caption-title">Order Summary</p>
+      <p class="flow-caption">Clean pricing and order information layout.</p>
+
+      <div class="flow-img">
+        <img src="p31.png" alt="">
+      </div>
     </div>
   </div>
 </div>
 
 <!-- ══════ EARNFORLIFE: TRUST & SUPPORT ══════ -->
 <div class="efl-section fade-up">
-  <h2 class="efl-section-title">TRUST & SUPPORT</p>
+  <h2 class="efl-section-title">TRUST & SUPPORT</h2>
   <p class="efl-body" style="max-width:640px;margin-bottom:48px;">Added support-focused sections to improve customer confidence and shopping experience.</p>
   <div class="efl-trust-grid">
   <div class="efl-screen-laptop"><img src="p41.png"></div>
@@ -1242,9 +2210,640 @@ footer {
   </div>
   <div class="efl-tools-bar">
     <span class="efl-info-label">Tools</span>
-    <span class="efl-info-value">HTML • CSS • JavaScript • Canva</span>
+    <span class="efl-info-value">HTML • CSS • JavaScript</span>
   </div>
 </div>
+
+
+<!-- ==================================================
+PAGE 01 — ILIA COVER
+================================================== -->
+
+<section id="customeranalytics-cover" class="project-section">
+
+<div class="project-cover">
+
+<div>
+
+<div class="project-label">
+PROJECT 03 - Academic Project • Public Dataset Analysis
+</div>
+
+<h1 class="project-title">
+ILIA BEAUTY
+</h1>
+
+<p class="proj-tagline-italic">
+Customer Insights & Churn Analytics
+</p>
+
+<p class="project-desc">
+A customer analytics project combining SPSS and Power BI to explore purchasing behavior, identify churn patterns, and generate actionable business insights.
+</p>
+
+<div class="project-tags">
+<span class="project-tag">Power BI</span>
+<span class="project-tag">SPSS</span>
+<span class="project-tag">Customer Analytics</span>
+<span class="project-tag">Churn Analysis</span>
+<span class="project-tag">N = 250,000</span>
+</div>
+
+</div>
+
+<div class="project-gallery">
+
+<div class="project-image">
+<img src="ilia_cover.jpg">
+</div>
+<div class="project-image">
+<img src="ilia_cover2.jpg">
+</div>
+</div>
+
+</section>
+<!-- ══════════════════════════════════════
+     PAGE 02 — BUSINESS QUESTION + KPIs
+══════════════════════════════════════ -->
+<section id="business">
+  <div class="section-inner">
+    <p class="page-label">Business Context</p>
+ 
+    <div class="biz-grid">
+ 
+      <div>
+        <h2 class="section-heading">Business<br><em>Question</em></h2>
+        <p class="body-text">
+        Which customer segments and purchasing behaviors are linked to churn, and what insights can improve retention?
+        <div class="dataset-note" style=" margin:24px 0 40px;padding:16px 18px; border-left:3px solid #555; background:#0d0d0d; color:#8f8f8f; font-size:14px; line-height:1.7;">
+          <strong>Dataset Source:</strong> Synthetic E-commerce Customer Behavior and Purchase Dataset (Kaggle), generated using the Faker Python library for educational and analytical purposes.
+        </div>
+        <p class="page-label" style="margin-bottom: 1rem;">Objectives</p>
+        <ul class="obj-list">
+          <li>
+            <span class="obj-num">01</span>
+            <span>Analyze customer purchasing behavior across demographic and product segments</span>
+          </li>
+          <li>
+            <span class="obj-num">02</span>
+            <span>Identify churn-prone customer segments through statistical testing</span>
+          </li>
+          <li>
+            <span class="obj-num">03</span>
+            <span>Explore relationships between demographics, payment behavior, and spending</span>
+          </li>
+          <li>
+            <span class="obj-num">04</span>
+            <span>Generate data-driven recommendations for improving customer retention</span>
+          </li>
+        </ul>
+      </div>
+ 
+      <div>
+        <p class="kpi-label">Analytical Highlights</p>
+        <div class="kpi-grid">
+ 
+          <div class="kpi-item">
+            <div>
+              <p class="kpi-name">Churn Rate</p>
+              <p class="kpi-desc">The percentage of customers who stop purchasing from the brand during the analysis period.</p>
+            </div>
+            <span class="kpi-badge">20.05%</span>
+          </div>
+ 
+          <div class="kpi-item">
+            <div>
+              <p class="kpi-name">Retention Rate</p>
+              <p class="kpi-desc">The percentage of customers who continue buying from the brand over time.</p>
+            </div>
+            <span class="kpi-badge">79.95%</span>
+          </div>
+ 
+          <div class="kpi-item">
+            <div>
+              <p class="kpi-name">Average Purchase Value</p>
+              <p class="kpi-desc">The average amount spent per transaction across all customers.</p>
+            </div>
+            <span class="kpi-badge">2,725</span>
+          </div>
+ 
+          <div class="kpi-item">
+            <div>
+              <p class="kpi-name">Monthly Revenue Trend</p>
+              <p class="kpi-desc">The change in revenue across months to monitor growth or decline.</p>
+            </div>
+            <span class="kpi-badge">↓ Sep–Nov</span>
+          </div>
+ 
+          <div class="kpi-item">
+            <div>
+              <p class="kpi-name">Return Rate</p>
+              <p class="kpi-desc">The percentage of orders that are returned by customers.</p>
+            </div>
+            <span class="kpi-badge">50%</span>
+          </div>
+ 
+        </div>
+      </div>
+ 
+    </div>
+  </div>
+</section>
+ 
+<!-- ==================================================
+PAGE 03 — ANALYSIS PROCESS
+================================================== -->
+
+<section class="project-section">
+  <p class="page-label">Methodology</p>
+
+  <div class="project-content">
+
+    <h2>Analysis Process</h2>
+
+    <div class="timeline">
+
+      <div class="timeline-item">
+        <div class="timeline-number">01</div>
+        <div class="timeline-title">Data Exploration</div>
+        <p class="tl-desc">Reviewed dataset structure, checked for missing values, and validated distributions across 250,000 customer records. Variables included age, gender, product category, payment method, purchase amount, returns, and churn status.</p>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-number">02</div>
+        <div class="timeline-title">Descriptive  Analysis</div>
+        <p class="tl-desc">Generated frequency tables and descriptive statistics in SPSS to profile the customer base — age range 18–70, average purchase ~2,725, and an even gender split. Churn rate confirmed at 20.1%.</p>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-number">03</div>
+        <div class="timeline-title">Statistical Analysis</div>
+        <p class="tl-desc">Applied chi-square tests of independence to assess associations between churn and categorical variables (gender, product category, payment method, age group). Independent samples t-tests were used for continuous variables (age, purchase amount).</p>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-number">04</div>
+        <div class="timeline-title">Dashboard Development</div>
+        <p class="tl-desc">Built an interactive Power BI dashboard featuring KPI cards, revenue trend line, churn breakdowns by segment, and customer distribution charts — enabling stakeholder exploration by product category, gender, and age group.</p>
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ══════════════════════════════════════
+     PAGE 04 — FINDINGS + RECOMMENDATIONS
+══════════════════════════════════════ -->
+<section id="findings">
+  <div class="section-inner">
+    <p class="page-label">Results & Insights</p>
+ 
+    <div class="findings-header">
+      <h2 class="section-heading">Key<br><em>Findings</em></h2>
+      <div>
+        <div class="stat-row">
+          <div class="stat-cell">
+            <p class="stat-num">250K</p>
+            <p class="stat-lbl">Customers</p>
+          </div>
+          <div class="stat-cell">
+            <p class="stat-num">20.1%</p>
+            <p class="stat-lbl">Churn Rate</p>
+          </div>
+          <div class="stat-cell">
+            <p class="stat-num">681M</p>
+            <p class="stat-lbl">Total Revenue</p>
+          </div>
+        </div>
+        <p class="body-text" style="font-size: 13px; margin-bottom: 0;">
+          Statistical tests run across 5 variables. Only 1 categorical variable — payment method — showed a significant association with churn.
+        </p>
+      </div>
+    </div>
+ 
+    <!-- findings grid -->
+    <div class="findings-grid">
+ 
+      <div class="finding-card">
+        <div class="finding-top">
+          <span class="finding-idx">Finding 01</span>
+          <span class="finding-sig sig-no">Consistent</span>
+        </div>
+        <p class="finding-title">Churn rate is stable at ~20% with no strong demographic protection</p>
+        <p class="finding-body">Churn is fairly consistent across the customer base — gender (p=.169) and product category (p=.910) show no statistically significant association with churn behavior.</p>
+      </div>
+ 
+      <div class="finding-card">
+        <div class="finding-top">
+          <span class="finding-idx">Finding 02</span>
+          <span class="finding-sig sig-yes">Significant p=.003</span>
+        </div>
+        <p class="finding-title">Payment method is the only variable significantly linked to churn</p>
+        <p class="finding-body">Chi-square test confirms a statistically significant relationship between payment method and churn (χ²=11.909, p=.003). This is the strongest actionable signal in the dataset.</p>
+        <p class="finding-stat">χ²=11.909 · df=2 · p=.003</p>
+      </div>
+ 
+      <div class="finding-card">
+        <div class="finding-top">
+          <span class="finding-idx">Finding 03</span>
+          <span class="finding-sig sig-no">Mixed signal</span>
+        </div>
+        <p class="finding-title">Age is associated with churn distribution, but not mean age difference</p>
+        <p class="finding-body">Chi-square shows a significant distribution across age groups (χ²=386.910, p&lt;.001), but the mean age between churned and retained customers does not differ significantly (t=1.141, p=.254) — suggesting age alone is not a reliable churn predictor.</p>
+        <p class="finding-stat">χ²=386.910 · t=1.141 · p=.254</p>
+      </div>
+ 
+      <div class="finding-card">
+        <div class="finding-top">
+          <span class="finding-idx">Finding 04</span>
+          <span class="finding-sig sig-no">Not significant</span>
+        </div>
+        <p class="finding-title">Gender and product category provide limited evidence for churn-based segmentation</p>
+        <p class="finding-body">Neither gender (p=.169) nor product category (p=.910) show a statistically significant relationship with churn. Retention strategies built on these segments lack statistical support.</p>
+        <p class="finding-stat">Gender p=.169 · Product p=.910</p>
+      </div>
+ 
+      <div class="finding-card">
+        <div class="finding-top">
+          <span class="finding-idx">Finding 05</span>
+          <span class="finding-sig sig-no">Not significant</span>
+        </div>
+        <p class="finding-title">Spending level does not distinguish churned from retained customers</p>
+        <p class="finding-body">Purchase amount does not differ significantly between churned and retained customers (t=-.353, p=.724). A mean difference of ~2.5 on a 100–5350 scale has no practical economic significance.</p>
+        <p class="finding-stat">t=-.353 · Mean diff=2.5 · p=.724</p>
+      </div>
+ 
+      <div class="finding-card">
+        <div class="finding-top">
+          <span class="finding-idx">Finding 06</span>
+          <span class="finding-sig sig-yes">Trend alert</span>
+        </div>
+        <p class="finding-title">Revenue declined sharply from ~63M to ~46M between August and November</p>
+        <p class="finding-body">A significant drop in monthly revenue from August (~63M) to November (~46M) suggests a possible seasonal pattern or operational issue. Revenue partially recovered in December to ~47M.</p>
+        <p class="finding-stat">Aug 63M → Nov 46M → Dec 47M</p>
+      </div>
+ 
+    </div>
+ 
+    <!-- evidence images -->
+    <p class="evidence-label">SPSS Output — Statistical Evidence</p>
+    <div class="evidence-grid">
+ 
+      <div class="evidence-item">
+        <img src="Frequencies.png" alt="Frequency table output" class="evidence-img">
+        <p class="evidence-cap">Frequency tables — distribution overview</p>
+      </div>
+ 
+      <div class="evidence-item">
+        <img src="pmeth_churn.png" alt="Payment method vs churn chi-square" class="evidence-img">
+        <p class="evidence-cap">Payment method × churn — χ²=11.909, p=.003</p>
+      </div>
+ 
+      <div class="evidence-item">
+        <img src="age_churn.png" alt="Age vs churn chi-square" class="evidence-img">
+        <p class="evidence-cap">Age × churn — χ²=386.910, p&lt;.001</p>
+      </div>
+ 
+      <div class="evidence-item">
+        <img src="Descriptives.png" alt="Descriptive statistics" class="evidence-img">
+        <p class="evidence-cap">Descriptive statistics — age & purchase amount</p>
+      </div>
+ 
+      <div class="evidence-item">
+        <img src="ttest2.png" alt="T-test purchase amount" class="evidence-img">
+        <p class="evidence-cap">Independent t-test — purchase amount, p=.724</p>
+      </div>
+ 
+      <div class="evidence-item" style="background: var(--charcoal); justify-content: center; align-items: center; padding: 1.5rem; gap: 0.5rem; display: flex; flex-direction: column;">
+        <p style="font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255,255,255,0.25); text-align: center;">Dataset</p>
+        <p style="font-family: var(--font-display); font-size: 28px; font-weight: 300; color: rgba(255,255,255,0.8); text-align: center;">250,000</p>
+        <p style="font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.08em; color: rgba(255,255,255,0.3); text-align: center;">customer records</p>
+        <div style="margin-top: 1rem; display: flex; flex-direction: column; gap: 6px; width: 100%;">
+         <div style="display: flex; justify-content: space-between; font-family: var(--font-mono); font-size: 10px; color: rgba(255,255,255,0.3); letter-spacing: 0.06em;">
+            <span>Frequency Analysis</span><span>4 Variables</span>
+          </div>
+          <div style="display: flex; justify-content: space-between; font-family: var(--font-mono); font-size: 10px; color: rgba(255,255,255,0.3); letter-spacing: 0.06em;">
+            <span>Descriptive Statistics</span><span>3 Variables</span>
+          </div>
+          <div style="display: flex; justify-content: space-between; font-family: var(--font-mono); font-size: 10px; color: rgba(255,255,255,0.3); letter-spacing: 0.06em;">
+            <span>Chi-Square tests</span><span>3</span>
+          </div>
+          <div style="display: flex; justify-content: space-between; font-family: var(--font-mono); font-size: 10px; color: rgba(255,255,255,0.3); letter-spacing: 0.06em;">
+            <span>T-tests</span><span>2</span>
+          </div>
+        </div>
+      </div>
+ 
+    </div>
+ 
+    <!-- dashboard -->
+    <p class="evidence-label">Power BI Dashboard</p>
+    <div class="dashboard-frame">
+      <img src="dashboard.png" alt="Power BI customer analytics dashboard">
+      <p class="dashboard-cap" style="color: #b7b3b3; font-size: 13px;">Customer analytics dashboard — revenue, churn, and segment breakdown</p>
+    </div>
+ 
+    <!-- recommendations -->
+    <p class="page-label" style="margin-bottom: 1.25rem;">Recommendations</p>
+    <div class="reco-grid">
+ 
+      <div class="reco-card">
+        <p class="reco-r">R1</p>
+        <p class="reco-title">Focus on the payment experience</p>
+        <p class="reco-body">Since payment method is the only variable with a statistically significant relationship to churn, analyze which payment options are associated with higher churn rates, and optimize the checkout UX for those segments.</p>
+      </div>
+ 
+      <div class="reco-card">
+        <p class="reco-r">R2</p>
+        <p class="reco-title">Avoid gender and product category as primary retention segments</p>
+        <p class="reco-body">Retention efforts should prioritize behavioral signals rather than simple demographic or category-based segmentation, which show no statistically significant relationship with churn.</p>
+      </div>
+ 
+      <div class="reco-card">
+        <p class="reco-r">R3</p>
+        <p class="reco-title">Investigate the September–November revenue decline</p>
+        <p class="reco-body">This drop may be related to seasonality, marketing campaign timing, or competition — and should be cross-checked with marketing and operational data to identify the root cause.</p>
+      </div>
+ 
+      <div class="reco-card">
+        <p class="reco-r">R4</p>
+        <p class="reco-title">Develop a retention monitoring dashboard</p>
+        <p class="reco-body">Create a dashboard that continuously tracks churn rate, revenue trends, and customer segments, enabling earlier detection of retention risks and supporting data-driven decision making.</p>
+      </div>
+ 
+    </div>
+ 
+  </div>
+</section>
+
+<!-- ==================================================
+PAGE 01 — DR.G COVER
+================================================== -->
+
+<section id="drg-cover" class="drgcover-section">
+
+<div class="project-cover">
+
+<div>
+
+<div class="project-label">
+PROJECT 04
+</div>
+<p style="  font-size:12px;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  color:#555;
+  margin-bottom:18px;">
+Academic Project • Year 1 • Individual Execution
+</p>
+
+<h1 class="project-title">
+DR.G
+</h1>
+
+<p class="project-desc">
+Independently developed a short-form product introduction video.
+</p>
+
+<a href="https://youtube.com/shorts/LGP1WbYPp3E?si=CeK-wwcNyEY48kPH"
+target="_blank"
+class="project-btn">
+View Video
+</a>
+
+</div>
+
+<div class="project-gallery">
+
+<div class="project-image">
+<img src="thum1.png">
+</div>
+
+<div class="project-image">
+<img src="thum.png">
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ==================================================
+PAGE 02 — PRODUCT & RESEARCH
+================================================== -->
+<section class="rs-section">
+<div class="rs-content">
+
+  <div class="rs-block">
+    <h3>Product Selection Rationale</h3>
+    <p>
+      As a product user, I leveraged firsthand experience to create more authentic and credible content.
+    </p>
+  </div>
+
+  <div class="rs-block">
+    <h3>Research Sources</h3>
+    <ul>
+      <li>Olive Young product information</li>
+      <li>TikTok reviews</li>
+      <li>Consumer feedback</li>
+      <li>Pricing references</li>
+    </ul>
+  </div>
+
+</div>
+
+  <div class="rs-gallery">
+
+    <div class="rs-image"><img src="rs1.jpg"></div>
+    <div class="rs-image"><img src="rs2.jpg"></div>
+    <div class="rs-image"><img src="rs3.jpg"></div>
+
+    <div class="rs-image"><img src="rs4.jpg"></div>
+    <div class="rs-image"><img src="rs5.jpg"></div>
+    <div class="rs-image"><img src="rs6.jpg"></div>
+
+  </div>
+
+</section>
+
+<!-- ==================================================
+PAGE 03 — CONTENT STRUCTURE & PRODUCTION
+================================================== -->
+
+<section class="project-section">
+
+  <div class="project-content">
+
+    <h2>Content Structure</h2>
+
+    <div class="timeline">
+
+      <div class="timeline-item">
+      <div class="timeline-number">01</div>
+      <div class="timeline-title">Introduction</div>
+    </div>
+
+    <div class="timeline-item">
+    <div class="timeline-number">02</div>
+    <div class="timeline-title">Ingredients</div>
+    </div>
+
+    <div class="timeline-item">
+    <div class="timeline-number">03</div>
+    <div class="timeline-title">Texture Demo</div>
+    </div>
+
+    <div class="timeline-item">
+    <div class="timeline-number">04</div>
+    <div class="timeline-title">Benefits & Pricing</div>
+    </div>
+  </div>
+</section>
+<!-- ===== VIDEO FRAMES ===== -->
+<section class="video-frames-section">
+
+  <div class="video-frames-header">
+    <h3>Selected frames from the video.</h3>
+  </div>
+
+  <div class="video-frames-grid">
+
+    <div class="frame"><img src="cut1.jpg"></div>
+    <div class="frame"><img src="cut2.jpg"></div>
+    <div class="frame"><img src="cut3.jpg"></div>
+    <div class="frame"><img src="cut4.jpg"></div>
+
+    <div class="frame"><img src="cut5.jpg"></div>
+    <div class="frame"><img src="cut6.jpg"></div>
+    <div class="frame"><img src="cut7.jpg"></div>
+    <div class="frame"><img src="cut8.jpg"></div>
+
+  </div>
+
+</section>
+
+
+
+<!-- ==================================================
+PAGE 04 — EDITING & REFLECTION
+================================================== -->
+<section class="er-section">
+
+<div class="er-grid">
+
+  <div class="er-content">
+
+    <h2>Editing Process</h2>
+
+    <ul>
+      <li>Clip Selection</li>
+      <li>Trimming & Scene Refinement</li>
+      <li>Image & Text Overlays</li>
+      <li>Transitions</li>
+      <li>Voice-over Integration</li>
+      <li>Sound Effects</li>
+      <li>Export Optimization</li>
+    </ul>
+
+    <h3>Tools</h3>
+    <p>CapCut</p>
+
+  </div>
+
+  <div class="er-gallery">
+    <div class="er-image">
+      <img src="capcut.jpg">
+    </div>
+  </div>
+
+</div>
+
+<div class="er-box">
+
+  <h2>What I Learned</h2>
+
+  <ul>
+    <li>Consumer research</li>
+    <li>Content marketing</li>
+    <li>Storytelling</li>
+    <li>Short-form content production</li>
+    <li>Video editing workflow</li>
+  </ul>
+
+</div>
+
+</section>
+<section class="references-section">
+
+  <div class="references-container">
+
+    <h2 class="page-label" style="font-size:42px; margin-top:30px; margin-bottom:10px;">References</h2>
+    <div class="references-grid">
+
+      <div class="reference-block">
+        <h3>Dataset</h3>
+        <p>
+          <a href="https://www.kaggle.com/datasets/shriyashjagtap/e-commerce-customer-for-behavior-analysis" target="_blank">Synthetic E-commerce Customer Behavior and Purchase Dataset (Kaggle)</a>
+        </p>
+      </div>
+
+      <div class="reference-block">
+        <h3>Product Research</h3>
+        <ul>
+          <li><a href="https://global.oliveyoung.com/product/detail?prdtNo=GA250732263&dataSource=search_result" target="_blank">Olive Young Global</a></li>
+          <li><a href="https://www.tiktok.com/view/product/1729474931256101122?_svg=1&checksum=92e9d74be6095d36d371ca9c47468cd3a5a325294385d907e5cada11fb3fedd7&encode_params=MIIBUQQMl-6frLroBLMG0bvmBIIBLQqHPt2SG_KjW5zqE0zPQPdYEJNdPfUfe4n0LlUHL4R6XQ-GmsVj0YbRHbpkdjnzD5sxp9YNYXvjEf0xGpjNiv44EPaUlMYs0UJUoEy82fmMXIeg9YQ8oOhNVLL-hGO-CEAF0D2ixjZMJn_CgVuqo208HBe55xo5UtrzzneCaEKYFaVYtfP4mQafzAGr1NYfh7pd8xdlW1WsvUTIGGObeBJxF_nEMdqMwpMiNFqwcKy_3sKsjeyp53q7uHk7gUkdJMfOhrSFch5EZQucZyKlVaRBvGyMKZKxkOJtxNfa9_3M0b-BAZvdLO2ZLCfiX4WC7y8iaCRE1tBHgQHGN9e7Sj9ov5ljGbHbLCjyA4cfSqwAnld2mqQZKObv0BqeYdMQPcsNtUmzON5uikkQM3YEEJmTA-NBBiZq_AVi1SJPNAM%3D&og_info=%7B%22title%22%3A%22Dr.G+Kem+d%C6%B0%E1%BB%A1ng+R.E.D+Blemish+Clear+Soothing+Cream+70ml+-+D%C6%B0%E1%BB%A1ng+%E1%BA%A9m%2C+l%C3%A0m+d%E1%BB%8Bu+da%2C+h%E1%BB%97+tr%E1%BB%A3+gi%E1%BA%A3m+t%C3%ACnh+tr%E1%BA%A1ng+da+m%E1%BA%A9n+%C4%91%E1%BB%8F%22%2C%22image%22%3A%22https%3A%5C%2F%5C%2Fp16-oec-sg.ibyteimg.com%5C%2Ftos-alisg-i-aphluv4xwc-sg%5C%2F136fc92589314469a632863ddb4c82d9~tplv-aphluv4xwc-resize-webp%3A260%3A260.webp%3Fdr%3D15582%26t%3D555f072d%26ps%3D933b5bde%26shp%3D7745054a%26shcp%3D9b759fb9%26idc%3Dmy%26from%3D2001012042%22%7D&sec_user_id=MS4wLjABAAAAEzyeqvsaSSoYk8aky9KtyFb_NSlY3Drv34zuEGIZ0x8xvRGkloK1OWM33rJP2nSa&share_app_id=1180&share_link_id=7E0AC45D-D008-47BC-9CC9-BBB2993E9E24&share_region=VN&social_share_type=15&timestamp=1779714904&trackParams=%7B%22device_id%22%3A%227604820635446183445%22%2C%22enable_shop_tab_popup%22%3A1%2C%22traffic_source_list%22%3A%5B6%2C7%5D%2C%22traffic_source%22%3A7%2C%22enter_from_info%22%3A%22product_share_outside%22%2C%22source_page_type%22%3A%22product_share%22%7D&tt_from=copy&u_code=D15BCEHF89FKB5&ug_btm=b1478%2Cb6661&unique_id=_ldtvy&user_id=6579629840361521154&utm_campaign=client_share&utm_medium=ios&utm_source=copy" target="_blank">
+            TikTok Shop</a></li>
+          <li><a href="https://vn.shp.ee/EvQAjWfE" target="_blank">Shopee Mall</a></li>
+          <li><a href="https://iliabeauty.com/" target="_blank">ILIA BEAUTY</a></li>
+        </ul>
+      </div>
+
+      <div class="reference-block">
+        <h3>Real-World Observation</h3>
+        <ul>
+          <li><a href="https://www.tiktok.com/@bama.hehe/video/7638552800061852936?_r=1&_t=ZS-96elVOoGUuV" target="_blank">TikTok: Parent Perspective on Personalization</a></li>
+          <li><a href="https://www.tiktok.com/search?q=kem%20d%C6%B0%E1%BB%A1ng%20%E1%BA%A9m%20drg&t=1779715049376" target="_blank">TikTok review videos</a></li>
+        </ul>
+      </div>
+
+      <div class="reference-block">
+        <h3>Visual References</h3>
+        <p>
+          <a href="https://www.pinterest.com/" target="_blank">Pinterest moodboards and product photography references</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="closing">
+
+  <div class="closing-big">
+    THANK<br>
+    YOU
+  </div>
+
+  <div class="closing-bottom">
+
+    <div class="closing-tagline">
+      Thank you for taking the time to explore my work.<br>
+      Looking for opportunities to turn curiosity, creativity, and analytical thinking into meaningful business impact. <br>
+      Looking forward to connecting with you.
+    </div>
+
+    <div class="closing-contacts">
+      <span>Zalo</span>
+      <span>Phone</span>
+      <span>Email</span>
+    </div>
+
+  </div>
+
+</section>
+
 <!-- ══════ FOOTER ══════ -->
 <footer>
   <span>© Le Doan Tuong Vy</span>
